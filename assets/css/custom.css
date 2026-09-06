@@ -420,3 +420,55 @@
     font-size: .85rem;
     margin: 0;
 }
+
+
+/* =====================================================
+   Responsive del hero (welcome) de Montserrat
+   ===================================================== */
+@media (max-width: 1199px) {
+    .wlc-filltext {
+        font-size: 150px;
+    }
+}
+
+@media (max-width: 991px) {
+    .wlc-filltext {
+        font-size: 96px;
+        top: 18%;
+    }
+    .wlc-author-1 {
+        width: 52%;
+    }
+}
+
+@media (max-width: 767px) {
+    .wlc-author-1 {
+        width: 100%;
+        height: auto;
+        right: 0;
+        bottom: 0;
+    }
+    .wlc-filltext {
+        font-size: 17vw;
+        top: 22%;
+        left: 0;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        width: 100%;
+        text-align: left;
+    }
+    .site-black .wlc-title {
+        position: relative;
+        z-index: 3;
+    }
+}
+
+@media (max-width: 480px) {
+    .wlc-filltext {
+        font-size: 15vw;
+        top: 24%;
+    }
+    .wlc-author-1 {
+        height: 62%;
+    }
+}
