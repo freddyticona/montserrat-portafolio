@@ -95,22 +95,6 @@
     border-radius: 30px;
 }
 
-/* Video local no disponible en línea */
-.coming-tag {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    z-index: 3;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #cf000f;
-    background: rgba(0, 0, 0, 0.65);
-    padding: 4px 12px;
-    border-radius: 30px;
-}
-
 /* Video en reproducción */
 .video-iframe {
     position: absolute;
@@ -471,4 +455,35 @@
     .wlc-author-1 {
         height: 62%;
     }
+}
+
+/* -------- Montserrat: extras (WhatsApp y TikTok) -------- */
+.tiktok-icon {
+    display: inline-flex;
+    vertical-align: -2px;
+}
+.tiktok-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.whatsapp-btn {
+    background-color: #25d366 !important;
+    border-color: #25d366 !important;
+    color: #ffffff !important;
+}
+.whatsapp-btn i {
+    margin-right: 6px;
+}
+.whatsapp-btn:hover,
+.whatsapp-btn:focus {
+    background-color: #1ebe5b !important;
+    border-color: #1ebe5b !important;
+    color: #ffffff !important;
+}
+
+.cta-form .whatsapp-btn {
+    display: inline-block;
+    margin-top: 12px;
 }
