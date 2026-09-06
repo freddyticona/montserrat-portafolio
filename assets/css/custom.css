@@ -1,0 +1,422 @@
+/* =====================================================
+   Montserrat · ajustes sobre la plantilla Glint
+   ===================================================== */
+
+/* Logo de marca en texto */
+.site-black .vlt-logo-text {
+    color: #fff;
+}
+
+.site-white .vlt-logo-text {
+    color: #0b0d0e;
+}
+
+.vlt-logo-text {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transition: color .3s;
+}
+
+.vlt-logo-text .dot {
+    color: #cf000f;
+}
+
+/* ------------------------------------------
+   Video player (contrato de video_embedded.js)
+   ------------------------------------------ */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Primer frame real como preview */
+.poster-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #000;
+    z-index: 0;
+}
+
+/* Capa oscura */
+.video-container .img-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.video-container .play-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+/* Título sobre el preview */
+.poster-caption {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 3;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 5px 12px;
+    border-radius: 30px;
+    max-width: calc(100% - 20px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Etiqueta de categoría */
+.video-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #cf000f;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 4px 12px;
+    border-radius: 30px;
+}
+
+/* Video local no disponible en línea */
+.coming-tag {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 3;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #cf000f;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 4px 12px;
+    border-radius: 30px;
+}
+
+/* Video en reproducción */
+.video-iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+/* Preview en vivo al pasar el mouse (TikTok o MP4 en bucle mudo) */
+.video-container .video-preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    object-fit: cover;
+    background-color: #000;
+    border: 0;
+}
+
+/* Capa transparente que capta el clic -> abrir el TikTok original */
+.video-container .tiktok-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    cursor: pointer;
+}
+
+/* Botón de play redondo */
+.video-btn {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: solid 2px #cf000f;
+    color: #cf000f;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+
+.video-btn:hover {
+    background-color: #cf000f;
+    color: #fff;
+}
+
+/* ------------------------------------------
+   Miniatura como tarjeta del portafolio
+   ------------------------------------------ */
+.single-portfolio-item.video-container {
+    height: 360px;
+}
+
+@media (max-width: 991px) {
+    .single-portfolio-item.video-container {
+        height: 320px;
+    }
+}
+
+/* ------------------------------------------
+   Filtros y descripciones (acento rojo)
+   ------------------------------------------ */
+.portfolio-filter li.active {
+    color: #cf000f;
+}
+
+.portfolio-description h6 {
+    color: #cf000f;
+}
+
+.portfolio-description h3 {
+    color: #0b0d0e;
+    font-size: 20px;
+}
+
+.site-black .portfolio-description h3 {
+    color: #fff;
+}
+
+.site-black .portfolio-description h6 {
+    color: #cf000f;
+}
+
+/* Hero: autor decorativo -> foto de Montserrat */
+.wlc-author-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.site-black .wlc-filltext {
+    color: #cf000f;
+}
+
+/* =====================================================
+   Componente: Tarjetas de TikTok (marco de teléfono)
+   ===================================================== */
+.tiktok-area {
+    position: relative;
+    overflow: hidden;
+    background: #f7f8fa;
+}
+
+.ttk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    gap: 42px 26px;
+    justify-items: center;
+}
+
+@media (max-width: 560px) {
+    .ttk-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ttk-card {
+    width: 100%;
+    max-width: 290px;
+    transition: transform .35s ease;
+}
+
+.ttk-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Marco de teléfono */
+.ttk-phone {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: #0b0d0e;
+    border: 12px solid #15181b;
+    border-radius: 34px;
+    box-shadow: 0 22px 44px rgba(11, 13, 14, .28), inset 0 0 0 1px #2d3135;
+}
+
+.ttk-screen {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background: #000;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.is-loaded .ttk-screen {
+    height: auto;
+    aspect-ratio: auto;
+}
+
+/* Quirófano: notch superior del móvil */
+.ttk-notch {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 20px;
+    background: #15181b;
+    border-radius: 0 0 12px 12px;
+    z-index: 30;
+}
+
+/* Contenedor del embed oficial de TikTok */
+.ttk-embed-box {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+}
+
+.is-loaded .ttk-embed-box {
+    position: relative;
+    height: auto;
+}
+
+.ttk-embed-box iframe {
+    display: block;
+    width: 100% !important;
+    border: 0;
+}
+
+.ttk-embed-box .tiktok-embed {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #000;
+}
+
+/* Esqueleto / estado de carga */
+.ttk-skeleton {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: linear-gradient(180deg, #16181b, #0b0d0e);
+    color: #8a9099;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.is-loaded .ttk-skeleton,
+.is-error .ttk-skeleton {
+    display: none;
+}
+
+.ttk-spinner {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 3px solid rgba(207, 0, 15, .22);
+    border-top-color: #cf000f;
+    animation: ttk-spin .85s linear infinite;
+}
+
+@keyframes ttk-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Estado de error (video borrado o embed fallido) */
+.ttk-error {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    text-align: center;
+    background: #16181b;
+    color: #fff;
+}
+
+.is-error .ttk-error {
+    display: flex;
+}
+
+.ttk-error i {
+    font-size: 2.1rem;
+    color: #cf000f;
+}
+
+.ttk-error p {
+    font-size: .85rem;
+    line-height: 1.5;
+    color: #c7cdd4;
+    margin: 0;
+}
+
+.ttk-link {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 10px 20px;
+    border: 2px solid #cf000f;
+    border-radius: 30px;
+    color: #fff;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background-color .3s, color .3s;
+}
+
+.ttk-link:hover {
+    background: #cf000f;
+    color: #fff;
+}
+
+/* Metadatos bajo el teléfono */
+.ttk-meta {
+    text-align: center;
+    margin-top: 14px;
+}
+
+.ttk-meta h6 {
+    color: #cf000f;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+}
+
+.ttk-meta p {
+    color: #5b6168;
+    font-size: .85rem;
+    margin: 0;
+}
