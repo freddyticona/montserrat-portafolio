@@ -482,7 +482,7 @@ h1.wlc-filltext {
     padding: 240px 0;
 }
 .about-area1{
-    background-image: url(assets/img/bg/about-bg.png);
+    background-image: url(../img/bg/about-bg.png);
     background-position: center;
     background-size: cover;
 }
