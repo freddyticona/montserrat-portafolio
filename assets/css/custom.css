@@ -242,6 +242,7 @@
     box-shadow: 0 22px 44px rgba(11, 13, 14, .28), inset 0 0 0 1px #2d3135;
 }
 
+/* Pantalla del teléfono: 9/16 durante el esqueleto/error (apariencia móvil) */
 .ttk-screen {
     position: relative;
     width: 100%;
@@ -251,9 +252,16 @@
     overflow: hidden;
 }
 
+/* Tras cargar: usamos el ratio real que TikTok declara en su oEmbed
+   (thumbnail_width 605 x thumbnail_height 1136 = 605/1136) para que
+   el iframe lo llene sin recortar la barra del perfil ni el pie. */
 .is-loaded .ttk-screen {
     height: auto;
-    aspect-ratio: auto;
+    aspect-ratio: 605 / 1136;
+}
+
+.is-error .ttk-screen {
+    aspect-ratio: 9 / 16;
 }
 
 /* Quirófano: notch superior del móvil */
@@ -278,12 +286,16 @@
 
 .is-loaded .ttk-embed-box {
     position: relative;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
+/* El iframe debe llenar el contenedor (el ratio 605/1136 lo hace coincidir
+   con el contenido vertical de TikTok: sin recortes arriba ni abajo). */
 .ttk-embed-box iframe {
     display: block;
     width: 100% !important;
+    height: 100% !important;
     border: 0;
 }
 
@@ -387,7 +399,8 @@
 /* Metadatos bajo el teléfono */
 .ttk-meta {
     text-align: center;
-    margin-top: 14px;
+    margin: 14px 2px 0;
+    padding: 0 6px;
 }
 
 .ttk-meta h6 {
@@ -397,12 +410,19 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0 0 4px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .ttk-meta p {
     color: #5b6168;
     font-size: .85rem;
+    line-height: 1.5;
     margin: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 
